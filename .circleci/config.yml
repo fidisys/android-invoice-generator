@@ -1,36 +1,20 @@
-# Android CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-android/ for more details
-#
-version: 2.1
+version: 2.0
+
 jobs:
   build:
     working_directory: ~/android-books-samplapp
     docker:
       - image: circleci/android:api-28
-    environment:
-      GRADLE_OPTS: -Xmx4g -Dorg.gradle.daemon=false
-      JVM_OPTS: -Xmx4g
+
     steps:
       - checkout
-      - restore_cache:
-          key: gradle-{{ checksum "build.gradle" }}-{{ checksum  "buildSrc/src/main/java/Dependencies.kt" }}-{{ checksum  "gradle/wrapper/gradle-wrapper.properties" }}
+
       - run:
-          name: Download Dependencies
-          command: ./gradlew androidDependencies
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: gradle-{{ checksum "build.gradle" }}-{{ checksum  "buildSrc/src/main/java/Dependencies.kt" }}-{{ checksum  "gradle/wrapper/gradle-wrapper.properties" }}
-      - run:
-          name: Run Detekt
-          command: ./gradlew detekt
-      - run:
-          name: Run Ktlint
-          command: ./gradlew ktlint
-      - run:
-          name: Run Lint
-          command: ./gradlew lintDebug
-      - run:
-          name: Run Unit Tests
-          command: ./gradlew testDebugUnitTest
+          name: Run tests
+          command: ./gradlew lintDebug testDebugUnitTest
+
+      - store_artifacts:
+          path: app/build/reports
+          destination: reports
+      - store_test_results:
+          path: app/build/test-results
