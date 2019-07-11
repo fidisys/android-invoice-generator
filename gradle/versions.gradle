@@ -1,0 +1,118 @@
+ext {
+    buildToolsVersion = "28.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    androidGradlePluginVersion = '3.4.1'
+    //compilerVersion = "$androidGradlePluginVersion"
+    kotlin_version = '1.3.41'
+
+    versions = [
+
+            support     : "1.0.0",
+            constraint  : "2.0.0-alpha2",
+            materialComp: "1.1.0-alpha06",
+            lifecycle   : "2.0.0",
+            room        : "2.1.0-alpha06",
+            paging      : "2.1.0-rc01",
+            navigation  : "2.1.0-alpha01",
+            glide       : "4.9.0",
+            fresco      : "2.0.0",
+            okhttp      : "3.9.0",
+            retrofit    : "2.3.0",
+            timber      : "4.5.1",
+            ktxCore     : "1.0.0"
+    ]
+
+    kotlinDeps = [
+
+            kotlinLib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+            kotlinCore: "androidx.core:core-ktx:$versions.ktxCore"
+    ]
+
+    supportDeps = [
+
+            annotation  : "androidx.annotation:annotation:$versions.support",
+            appCompatv7 : "androidx.appcompat:appcompat:$versions.support",
+            recyclerView: "androidx.recyclerview:recyclerview:$versions.support",
+            cardView    : "androidx.cardview:cardview:$versions.support"
+    ]
+
+    constraintDeps = [
+
+            constraint: "androidx.constraintlayout:constraintlayout:$versions.constraint"
+
+    ]
+
+    materialCompDeps = [
+
+            materialComp: "com.google.android.material:material:$versions.materialComp"
+    ]
+
+    lifeCycleDeps = [
+
+            lifecycleExt    : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+            lifecycleRuntime: "androidx.lifecycle:lifecycle-runtime:$versions.lifecycle",
+
+    ]
+
+    roomDeps = [
+
+            runtime: "androidx.room:room-runtime:$versions.room"
+    ]
+
+    pagingDeps = [
+
+            paging: "androidx.paging:paging-runtime:$versions.paging"
+    ]
+
+    navigationDeps = [
+
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
+            navigationUI      : "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+    ]
+
+    okhttpDeps = [
+
+            okhttpLogger: "com.squareup.okhttp3:logging-interceptor:$versions.okhttp"
+    ]
+
+    retrofitDeps = [
+
+            retrofit    : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            retrofitGson: "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+            retrofitMock: "com.squareup.retrofit2:retrofit-mock:$versions.retrofit"
+
+    ]
+
+    loggingDeps = [
+
+            timber: "com.jakewharton.timber:timber:$versions.timber"
+    ]
+
+    glideDeps = [
+
+            glide: "com.github.bumptech.glide:glide:$versions.glide",
+    ]
+
+    fresocDeps = [
+
+            fresco: "com.facebook.fresco:fresco:$versions.fresco"
+    ]
+
+
+    kotlinLibs = kotlinDeps.values()
+    supportLibs = supportDeps.values()
+    constraintLibs = constraintDeps.values()
+    archTechCompLibs = lifeCycleDeps.values() + navigationDeps.values() + pagingDeps.values()
+    databaseLibs = roomDeps.values()
+    networkLibs = retrofitDeps.values() + okhttpDeps.values()
+    loggingLibs = loggingDeps.values()
+    materialCompLibs = materialCompDeps.values()
+    imageProcessingLibs = glideDeps.values() + fresocDeps.values()
+
+    roomLibsCompiler = "androidx.room:room-compiler:$versions.room"
+    lifecycleLibsCompiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
+    glideCompiler = "com.github.bumptech.glide:compiler:$versions.glide"
+}
+
