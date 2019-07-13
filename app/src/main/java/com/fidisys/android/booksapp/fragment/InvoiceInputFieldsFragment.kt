@@ -5,21 +5,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.fidisys.android.booksapp.R
-import kotlinx.android.synthetic.main.fragment_invoice_input_fields.*
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.fidisys.android.booksapp.data.Invoice
+import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
+import timber.log.Timber
 
 /**
  * A simple [Fragment] subclass.
  *
  */
 class InvoiceInputFieldsFragment : Fragment() {
+
+    lateinit var invoice: Invoice
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,16 +30,32 @@ class InvoiceInputFieldsFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_invoice_input_fields, container, false)
+        return inflater.inflate(R.layout.fragment_invoice_input_form, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        save_invoice_btn.setOnClickListener(
-                Navigation.createNavigateOnClickListener(R.id.invoicePreviewFragment, null))
+        setUpViews(view)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+    }
+
+    private fun setUpViews(view: View) {
+        invoice_save_button.setOnClickListener { navigateToPreview(view) }
+    }
+
+    private fun navigateToPreview(v: View) {
+        if (validateInputForms()) {
+            invoice = Invoice("Fidisys")
+            val bundle = bundleOf("invoice" to invoice)
+            Navigation.findNavController(v).navigate(R.id.invoicePreviewFragment, bundle)
+        }
+    }
+
+    private fun validateInputForms(): Boolean {
+        Timber.d("validate")
+        return true
     }
 }

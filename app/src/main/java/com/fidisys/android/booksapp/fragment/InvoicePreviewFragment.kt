@@ -7,17 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.fidisys.android.booksapp.R
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import com.fidisys.android.booksapp.data.Invoice
+import timber.log.Timber
 
 /**
  * A simple [Fragment] subclass.
  *
  */
 class InvoicePreviewFragment : Fragment() {
+
+    private var invoice: Invoice? = null
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -27,5 +26,14 @@ class InvoicePreviewFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_invoice_preview, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setUpViews()
+    }
+
+    private fun setUpViews() {
+        invoice = arguments?.getParcelable("invoice")
+        Timber.d("args %s", invoice?.name)
+    }
 
 }
