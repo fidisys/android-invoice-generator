@@ -7,7 +7,8 @@
         android:layout_height="match_parent"
         android:focusable="true"
         android:clickable="true"
-        tools:context=".fragment.InvoiceInputFieldsFragment"
+        android:focusableInTouchMode="true"
+        tools:context=".fragment.InvoiceInputFormFragment"
         android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -58,9 +59,9 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/invoice_number_input"
                             android:hint="@string/number"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintTop_toBottomOf="@id/invoice_title_text"
                             android:layout_height="wrap_content">
 
@@ -75,9 +76,9 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/invoice_date_input"
                             android:hint="@string/date"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintTop_toBottomOf="@id/invoice_number_input"
                             android:layout_height="wrap_content">
 
@@ -115,8 +116,8 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/product_name_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:hint="@string/name"
                             app:layout_constraintTop_toBottomOf="@id/product_title_text"
                             android:layout_height="wrap_content">
@@ -132,7 +133,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/product_description_input"
                             android:hint="@string/description"
                             app:layout_constraintTop_toBottomOf="@id/product_name_input"
@@ -149,7 +150,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="0dp"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/billing_hours_input"
                             app:layout_constraintHorizontal_bias="0.5"
                             android:hint="@string/hours"
@@ -167,8 +168,8 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/billing_price_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/billing_hours_input"
                             app:layout_constraintTop_toTopOf="@id/billing_hours_input"
@@ -211,7 +212,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/client_name_input"
                             android:hint="@string/name"
                             app:layout_constraintTop_toBottomOf="@id/client_info_title_text"
@@ -228,8 +229,8 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/client_address_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:hint="@string/address"
                             app:layout_constraintTop_toBottomOf="@id/client_name_input"
                             android:layout_height="wrap_content">
@@ -243,10 +244,10 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/client_pincode_input"
                             app:layout_constraintTop_toBottomOf="@id/client_address_input"
                             style="@style/Widget.TextInputLayout"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/pincode"

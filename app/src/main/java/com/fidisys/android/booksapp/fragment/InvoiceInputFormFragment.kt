@@ -17,7 +17,7 @@ import timber.log.Timber
  * A simple [Fragment] subclass.
  *
  */
-class InvoiceInputFieldsFragment : Fragment() {
+class InvoiceInputFormFragment : Fragment() {
 
     lateinit var invoice: Invoice
 
