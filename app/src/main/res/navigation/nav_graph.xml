@@ -6,10 +6,10 @@
     app:startDestination="@id/invoiceInputFieldsFragment">
 
     <fragment
-        android:id="@+id/invoiceInputFieldsFragment"
-        android:name="com.fidisys.android.booksapp.fragment.InvoiceInputFieldsFragment"
-        android:label="fragment_invoice_input_fields"
-        tools:layout="@layout/fragment_invoice_input_fields">
+            android:id="@+id/invoiceInputFieldsFragment"
+            android:name="com.fidisys.android.booksapp.fragment.InvoiceInputFieldsFragment"
+            android:label="fragment_invoice_input_form"
+            tools:layout="@layout/fragment_invoice_input_form">
         <action
             android:id="@+id/action_invoiceInputFieldsFragment_to_invoicePreviewFragment"
             app:enterAnim="@anim/fade_out"
@@ -18,9 +18,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/invoicePreviewFragment"
-        android:name="com.fidisys.android.booksapp.fragment.InvoicePreviewFragment"
-        android:label="fragment_invoice_preview"
-        tools:layout="@layout/fragment_invoice_preview" />
-
+            android:id="@+id/invoicePreviewFragment"
+            android:name="com.fidisys.android.booksapp.fragment.InvoicePreviewFragment"
+            android:label="fragment_invoice_preview"
+            tools:layout="@layout/fragment_invoice_preview">
+        <argument android:name="invoice" app:argType="com.fidisys.android.booksapp.data.Invoice"/>
+    </fragment>
 </navigation>

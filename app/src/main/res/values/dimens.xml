@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //margins
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="fragment_margin">16dp</dimen>
+    <dimen name="activity_margin_small">8dp</dimen>
+    <dimen name="fragment_margin_small">8dp</dimen>
+    <dimen name="textview_padding">8dp</dimen>
+</resources>

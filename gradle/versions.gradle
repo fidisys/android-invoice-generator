@@ -69,7 +69,7 @@ ext {
     navigationDeps = [
 
             navigationFragment: "androidx.navigation:navigation-fragment-ktx:$versions.navigation",
-            navigationUI      : "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+            navigationUI      : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
     ]
 
     okhttpDeps = [

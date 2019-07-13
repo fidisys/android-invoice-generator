@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        tools:context=".fragment.InvoiceInputFieldsFragment"
+        android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            app:liftOnScroll="true"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                app:title="New Voice"
+                app:layout_scrollFlags="scroll"
+                style="@style/Widget.Toolbar"
+                android:layout_height="?attr/actionBarSize"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:padding="8dp"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:id="@+id/invoice_info_card"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/invoice"
+                            android:id="@+id/invoice_title_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:textAllCaps="true"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:padding="@dimen/textview_padding"
+                            android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/invoice_number_input"
+                            android:hint="@string/number"
+                            app:layout_constraintTop_toBottomOf="@id/invoice_title_text"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/invoice_edit_text"
+                                android:inputType="number"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/invoice_date_input"
+                            android:hint="@string/date"
+                            app:layout_constraintTop_toBottomOf="@id/invoice_number_input"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/invoice_date_text"
+                                android:inputType="text"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:id="@+id/product_info_card"
+                    app:layout_constraintTop_toBottomOf="@id/client_info_card"
+                    android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/product"
+                            android:textAllCaps="true"
+                            android:id="@+id/product_title_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:padding="@dimen/textview_padding"
+                            android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/product_name_input"
+                            android:hint="@string/name"
+                            app:layout_constraintTop_toBottomOf="@id/product_title_text"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/product_name_text"
+                                android:inputType="text"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/product_description_input"
+                            android:hint="@string/description"
+                            app:layout_constraintTop_toBottomOf="@id/product_name_input"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/product_description_text"
+                                android:inputType="text"
+                                android:maxLines="5"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="0dp"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/billing_hours_input"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            android:hint="@string/hours"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/billing_price_input"
+                            app:layout_constraintTop_toBottomOf="@id/product_description_input"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/billing_hours_text"
+                                android:inputType="text"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/billing_price_input"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/billing_hours_input"
+                            app:layout_constraintTop_toTopOf="@id/billing_hours_input"
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/price"
+                            app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/billing_price_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="8dp"
+                    android:id="@+id/client_info_card"
+                    app:layout_constraintTop_toBottomOf="@id/invoice_info_card"
+                    android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/client"
+                            android:textAllCaps="true"
+                            android:id="@+id/client_info_title_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:padding="@dimen/textview_padding"
+                            android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/client_name_input"
+                            android:hint="@string/name"
+                            app:layout_constraintTop_toBottomOf="@id/client_info_title_text"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/client_name_text"
+                                android:inputType="text"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/client_address_input"
+                            android:hint="@string/address"
+                            app:layout_constraintTop_toBottomOf="@id/client_name_input"
+                            android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/client_address_text"
+                                android:inputType="text"
+                                android:maxLines="1"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:padding="@dimen/textview_padding"
+                            android:id="@+id/client_pincode_input"
+                            app:layout_constraintTop_toBottomOf="@id/client_address_input"
+                            style="@style/Widget.TextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/pincode"
+                            app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/client_pincode_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.Button"
+                    android:text="@string/save"
+                    android:layout_margin="@dimen/activity_margin_small"
+                    android:id="@+id/invoice_save_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/product_info_card"
+                    android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
