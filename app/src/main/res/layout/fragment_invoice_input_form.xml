@@ -7,7 +7,8 @@
         android:layout_height="match_parent"
         android:focusable="true"
         android:clickable="true"
-        tools:context=".fragment.InvoiceInputFieldsFragment"
+        android:focusableInTouchMode="true"
+        tools:context=".fragment.InvoiceInputFormFragment"
         android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,8 +19,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
-                app:title="New Voice"
+                app:title="@string/create_invoice"
                 app:layout_scrollFlags="scroll"
+                app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 style="@style/Widget.Toolbar"
                 android:layout_height="?attr/actionBarSize"/>
     </com.google.android.material.appbar.AppBarLayout>
@@ -39,6 +41,8 @@
                     android:layout_margin="8dp"
                     android:id="@+id/invoice_info_card"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:cardElevation="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/client_info_card"
                     android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,22 +56,22 @@
                             app:layout_constraintStart_toStartOf="parent"
                             android:textAllCaps="true"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:padding="@dimen/textview_padding"
+                            android:padding="@dimen/text_view_padding"
                             android:layout_height="wrap_content"/>
 
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/invoice_number_input"
                             android:hint="@string/number"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintTop_toBottomOf="@id/invoice_title_text"
                             android:layout_height="wrap_content">
 
                         <com.google.android.material.textfield.TextInputEditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:id="@+id/invoice_edit_text"
+                                android:id="@+id/invoice_number_text"
                                 android:inputType="number"
                                 android:maxLines="1"/>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -75,9 +79,9 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/invoice_date_input"
                             android:hint="@string/date"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintTop_toBottomOf="@id/invoice_number_input"
                             android:layout_height="wrap_content">
 
@@ -85,7 +89,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/invoice_date_text"
-                                android:inputType="text"
+                                android:inputType="date"
                                 android:maxLines="1"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -95,7 +99,9 @@
                     android:layout_width="match_parent"
                     android:layout_margin="8dp"
                     android:id="@+id/product_info_card"
+                    app:cardElevation="5dp"
                     app:layout_constraintTop_toBottomOf="@id/client_info_card"
+                    app:layout_constraintBottom_toTopOf="@id/invoice_save_button"
                     android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,14 +115,14 @@
                             android:id="@+id/product_title_text"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:padding="@dimen/textview_padding"
+                            android:padding="@dimen/text_view_padding"
                             android:layout_height="wrap_content"/>
 
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/product_name_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:hint="@string/name"
                             app:layout_constraintTop_toBottomOf="@id/product_title_text"
                             android:layout_height="wrap_content">
@@ -132,7 +138,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/product_description_input"
                             android:hint="@string/description"
                             app:layout_constraintTop_toBottomOf="@id/product_name_input"
@@ -142,14 +148,14 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/product_description_text"
-                                android:inputType="text"
+                                android:inputType="textMultiLine"
                                 android:maxLines="5"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="0dp"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/billing_hours_input"
                             app:layout_constraintHorizontal_bias="0.5"
                             android:hint="@string/hours"
@@ -162,27 +168,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/billing_hours_text"
-                                android:inputType="text"
+                                android:inputType="number"
                                 android:maxLines="1"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/billing_price_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@id/billing_hours_input"
-                            app:layout_constraintTop_toTopOf="@id/billing_hours_input"
+                            app:layout_constraintTop_toBottomOf="@id/product_description_input"
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:hint="@string/price"
-                            app:errorEnabled="true">
+                            android:hint="@string/price">
 
                         <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/billing_price_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="textPassword"/>
+                                android:inputType="number"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -190,6 +195,7 @@
             <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_margin="8dp"
+                    app:cardElevation="5dp"
                     android:id="@+id/client_info_card"
                     app:layout_constraintTop_toBottomOf="@id/invoice_info_card"
                     android:layout_height="wrap_content">
@@ -205,13 +211,13 @@
                             android:id="@+id/client_info_title_text"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            android:padding="@dimen/textview_padding"
+                            android:padding="@dimen/text_view_padding"
                             android:layout_height="wrap_content"/>
 
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:id="@+id/client_name_input"
                             android:hint="@string/name"
                             app:layout_constraintTop_toBottomOf="@id/client_info_title_text"
@@ -228,8 +234,8 @@
                     <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.TextInputLayout"
                             android:layout_width="match_parent"
-                            android:padding="@dimen/textview_padding"
                             android:id="@+id/client_address_input"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:hint="@string/address"
                             app:layout_constraintTop_toBottomOf="@id/client_name_input"
                             android:layout_height="wrap_content">
@@ -238,25 +244,24 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/client_address_text"
-                                android:inputType="text"
+                                android:inputType="textMultiLine"
                                 android:maxLines="1"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
-                            android:padding="@dimen/textview_padding"
-                            android:id="@+id/client_pincode_input"
+                            android:id="@+id/client_pin_code_input"
                             app:layout_constraintTop_toBottomOf="@id/client_address_input"
                             style="@style/Widget.TextInputLayout"
+                            android:layout_margin="@dimen/fragment_margin_small"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/pincode"
-                            app:errorEnabled="true">
+                            android:hint="@string/pincode">
 
                         <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/client_pincode_text"
+                                android:id="@+id/client_pin_code_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="textPassword"/>
+                                android:inputType="number"/>
                     </com.google.android.material.textfield.TextInputLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -265,10 +270,11 @@
                     android:layout_width="wrap_content"
                     style="@style/Widget.Button"
                     android:text="@string/save"
-                    android:layout_margin="@dimen/activity_margin_small"
+                    android:layout_margin="@dimen/activity_margin_medium"
                     android:id="@+id/invoice_save_button"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/product_info_card"
                     android:layout_height="wrap_content"/>
         </androidx.constraintlayout.widget.ConstraintLayout>

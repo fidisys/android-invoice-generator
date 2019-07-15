@@ -19,11 +19,22 @@
         <item name="hintTextAppearance">@style/TextAppearance.TextInputLayout.HintText</item>
         <item name="hintTextColor">@color/textColorPrimary</item>
         <item name="android:paddingBottom">8dp</item>
+        <item name="errorTextAppearance">@style/TextAppearance.TextInputLayout.ErrorText</item>
         <item name="boxStrokeColor">@color/textInputOutlineColor</item>
     </style>
 
     <style name="TextAppearance.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.TextInputLayout.ErrorText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="TextAppearance.TextInputLayout.HelperText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:enabled">true</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
     <style name="Widget.Button" parent="Widget.MaterialComponents.Button">
