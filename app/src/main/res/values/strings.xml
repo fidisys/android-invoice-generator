@@ -13,4 +13,5 @@
     <string name="save">save</string>
     <string name="hours">hours</string>
     <string name="price">price</string>
+    <string name="create_invoice">Create Invoice</string>
 </resources>

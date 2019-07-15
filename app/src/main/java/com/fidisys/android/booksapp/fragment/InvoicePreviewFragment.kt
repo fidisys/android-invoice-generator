@@ -33,7 +33,7 @@ class InvoicePreviewFragment : Fragment() {
 
     private fun setUpViews() {
         invoice = arguments?.getParcelable("invoice")
-        Timber.d("args %s", invoice?.name)
+        Timber.d("args invoice %s", invoice)
     }
 
 }
