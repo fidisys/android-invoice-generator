@@ -3,7 +3,7 @@ ext {
     minSdkVersion = 21
     targetSdkVersion = 28
     compileSdkVersion = 28
-    androidGradlePluginVersion = '3.4.1'
+    androidGradlePluginVersion = '3.4.2'
     //compilerVersion = "$androidGradlePluginVersion"
     kotlin_version = '1.3.41'
 

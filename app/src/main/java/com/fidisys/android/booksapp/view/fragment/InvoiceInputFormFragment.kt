@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.fragment
+package com.fidisys.android.booksapp.view.fragment
 
 
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.fidisys.android.booksapp.R
-import com.fidisys.android.booksapp.data.Invoice
+import com.fidisys.android.booksapp.repository.data.Invoice
 import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
 
 /**

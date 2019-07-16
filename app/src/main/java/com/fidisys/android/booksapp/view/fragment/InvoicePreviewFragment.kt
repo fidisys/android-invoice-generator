@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.fragment
+package com.fidisys.android.booksapp.view.fragment
 
 
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.fidisys.android.booksapp.R
-import com.fidisys.android.booksapp.data.Invoice
+import com.fidisys.android.booksapp.repository.data.Invoice
 import timber.log.Timber
 
 /**

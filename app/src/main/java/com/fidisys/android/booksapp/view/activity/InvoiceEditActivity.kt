@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.activity
+package com.fidisys.android.booksapp.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
