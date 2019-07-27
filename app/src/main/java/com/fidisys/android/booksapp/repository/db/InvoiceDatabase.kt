@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.fidisys.android.booksapp.repository.data.Invoice
 
-@Database(entities = [Invoice::class], version = 1)
+@Database(entities = [Invoice::class], version = 1, exportSchema = false)
 abstract class InvoiceDatabase : RoomDatabase() {
     abstract fun invoiceDao(): InvoiceDao
 

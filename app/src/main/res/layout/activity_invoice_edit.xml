@@ -14,4 +14,11 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/action_button_create_invoice"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            android:layout_margin="@dimen/activity_margin_medium"
+            android:layout_gravity="bottom|end"
+            android:layout_height="wrap_content"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

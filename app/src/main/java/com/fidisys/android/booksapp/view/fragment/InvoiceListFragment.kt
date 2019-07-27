@@ -1,19 +1,10 @@
 package com.fidisys.android.booksapp.view.fragment
 
-
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.fidisys.android.booksapp.repository.data.Invoice
-import timber.log.Timber
 
-/**
- * A simple [Fragment] subclass.
- *
- */
-class InvoicePreviewFragment : Fragment() {
-
-    private var invoice: Invoice? = null
+class InvoiceListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -21,7 +12,6 @@ class InvoicePreviewFragment : Fragment() {
     }
 
     private fun setUpViews() {
-        invoice = arguments?.getParcelable("invoice")
-        Timber.d("args invoice %s", invoice)
+
     }
 }

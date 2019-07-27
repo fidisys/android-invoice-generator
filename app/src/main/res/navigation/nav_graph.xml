@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/invoiceInputFieldsFragment">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/invoiceListsFragment">
+
+    <fragment
+            android:id="@+id/invoiceListsFragment"
+            android:name="com.fidisys.android.booksapp.view.fragment.InvoiceListFragment"
+            android:label="fragment_invoice_input_form"
+            tools:layout="@layout/fragment_invoice_list">
+
+        <action
+                android:id="@+id/action_invoiceListsFragment_to_invoiceInputFieldsFragment"
+                app:enterAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_out_right"
+                app:destination="@id/invoiceInputFieldsFragment"/>
+    </fragment>
 
     <fragment
             android:id="@+id/invoiceInputFieldsFragment"
             android:name="com.fidisys.android.booksapp.view.fragment.InvoiceInputFormFragment"
             android:label="fragment_invoice_input_form"
             tools:layout="@layout/fragment_invoice_input_form">
+
         <action
-            android:id="@+id/action_invoiceInputFieldsFragment_to_invoicePreviewFragment"
-            app:enterAnim="@anim/fade_out"
-            app:popEnterAnim="@anim/slide_out_right"
-            app:destination="@id/invoicePreviewFragment" />
+                android:id="@+id/action_invoiceInputFieldsFragment_to_invoicePreviewFragment"
+                app:enterAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_out_right"
+                app:destination="@id/invoicePreviewFragment"/>
     </fragment>
 
     <fragment
@@ -22,6 +36,9 @@
             android:name="com.fidisys.android.booksapp.view.fragment.InvoicePreviewFragment"
             android:label="fragment_invoice_preview"
             tools:layout="@layout/fragment_invoice_preview">
-        <argument android:name="invoice" app:argType="com.fidisys.android.booksapp.data.Invoice"/>
+
+        <argument
+                android:name="invoice"
+                app:argType="com.fidisys.android.booksapp.repository.data.Invoice"/>
     </fragment>
 </navigation>
