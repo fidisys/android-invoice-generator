@@ -13,7 +13,7 @@ apply from: "$rootDir/gradle/versions.gradle"
 android {
     compileSdkVersion project.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.fidisys.android.booksapp"
+        applicationId "com.fidisys.android.invoiceapp"
         minSdkVersion project.ext.minSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp
+package com.fidisys.android.invoiceapp
 
 import org.junit.Test
 

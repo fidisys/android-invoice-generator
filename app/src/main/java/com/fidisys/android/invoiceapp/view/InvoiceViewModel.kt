@@ -1,9 +1,9 @@
-package com.fidisys.android.booksapp.view
+package com.fidisys.android.invoiceapp.view
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import com.fidisys.android.booksapp.repository.InvoiceRepository
-import com.fidisys.android.booksapp.repository.db.InvoiceDatabase
+import com.fidisys.android.invoiceapp.repository.InvoiceRepository
+import com.fidisys.android.invoiceapp.repository.db.InvoiceDatabase
 
 class InvoiceViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: InvoiceRepository

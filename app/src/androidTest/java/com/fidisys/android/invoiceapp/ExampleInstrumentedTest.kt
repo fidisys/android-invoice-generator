@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp
+package com.fidisys.android.invoiceapp
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.fidisys.android.booksapp", appContext.packageName)
+        assertEquals("com.fidisys.android.invoiceapp", appContext.packageName)
     }
 }

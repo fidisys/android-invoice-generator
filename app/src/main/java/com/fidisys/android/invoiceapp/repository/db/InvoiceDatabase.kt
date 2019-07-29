@@ -1,10 +1,10 @@
-package com.fidisys.android.booksapp.repository.db
+package com.fidisys.android.invoiceapp.repository.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.fidisys.android.booksapp.repository.data.Invoice
+import com.fidisys.android.invoiceapp.repository.data.Invoice
 
 @Database(entities = [Invoice::class], version = 1, exportSchema = false)
 abstract class InvoiceDatabase : RoomDatabase() {

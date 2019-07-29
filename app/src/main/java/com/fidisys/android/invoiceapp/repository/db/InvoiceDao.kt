@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.repository.db
+package com.fidisys.android.invoiceapp.repository.db
 
 import androidx.room.Dao
 

@@ -7,7 +7,7 @@
 
     <fragment
             android:id="@+id/invoiceListsFragment"
-            android:name="com.fidisys.android.booksapp.view.fragment.InvoiceListFragment"
+            android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceListFragment"
             android:label="fragment_invoice_input_form"
             tools:layout="@layout/fragment_invoice_list">
 
@@ -20,7 +20,7 @@
 
     <fragment
             android:id="@+id/invoiceInputFieldsFragment"
-            android:name="com.fidisys.android.booksapp.view.fragment.InvoiceInputFormFragment"
+            android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceInputFormFragment"
             android:label="fragment_invoice_input_form"
             tools:layout="@layout/fragment_invoice_input_form">
 
@@ -33,7 +33,7 @@
 
     <fragment
             android:id="@+id/invoicePreviewFragment"
-            android:name="com.fidisys.android.booksapp.view.fragment.InvoicePreviewFragment"
+            android:name="com.fidisys.android.invoiceapp.view.fragment.InvoicePreviewFragment"
             android:label="fragment_invoice_preview"
             tools:layout="@layout/fragment_invoice_preview">
 

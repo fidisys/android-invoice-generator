@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.repository.data
+package com.fidisys.android.invoiceapp.repository.data
 
 import android.os.Parcel
 import android.os.Parcelable

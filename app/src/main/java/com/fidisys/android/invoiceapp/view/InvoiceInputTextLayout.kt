@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.view
+package com.fidisys.android.invoiceapp.view
 
 import android.content.Context
 import android.util.AttributeSet

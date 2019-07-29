@@ -1,17 +1,15 @@
-package com.fidisys.android.booksapp.view.fragment
+package com.fidisys.android.invoiceapp.view.fragment
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import com.fidisys.android.booksapp.R
-import com.fidisys.android.booksapp.repository.data.Invoice
+import com.fidisys.android.invoiceapp.R
+import com.fidisys.android.invoiceapp.repository.data.Invoice
 import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
 
 /**
