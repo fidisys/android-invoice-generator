@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bank_text_account_number"
+            android:layout_width="wrap_content"
+            android:text="Account No : 20233110861"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bank_text_account_name"
+            android:text="Name: Thamizhselvan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bank_text_name"
+            android:text="Bank: SBI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bank_text_branch"
+            android:text="Branch: Tidel Park,Chennai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bank_text_ifsc"
+            android:text="IFS code: SBIN0004285"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

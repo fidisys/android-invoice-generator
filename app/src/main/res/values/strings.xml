@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BooksApp</string>
+    <string name="app_name">InvoiceApp</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="invoice">Invoice</string>
     <string name="client">Client</string>
@@ -7,7 +7,7 @@
     <string name="number">Number</string>
     <string name="name">Name</string>
     <string name="address">Address</string>
-    <string name="pincode">Pincode</string>
+    <string name="pincode">Pin code</string>
     <string name="product">Product</string>
     <string name="description">Description</string>
     <string name="save">save</string>

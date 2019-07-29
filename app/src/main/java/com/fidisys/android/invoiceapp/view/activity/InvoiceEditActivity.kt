@@ -1,8 +1,8 @@
-package com.fidisys.android.booksapp.activity
+package com.fidisys.android.invoiceapp.view.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.fidisys.android.booksapp.R
+import com.fidisys.android.invoiceapp.R
 
 class InvoiceEditActivity : AppCompatActivity() {
 

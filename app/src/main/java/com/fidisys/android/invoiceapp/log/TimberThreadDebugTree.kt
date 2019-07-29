@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.log
+package com.fidisys.android.invoiceapp.log
 
 
 import timber.log.Timber

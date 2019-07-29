@@ -8,7 +8,7 @@
         android:focusable="true"
         android:clickable="true"
         android:focusableInTouchMode="true"
-        tools:context=".fragment.InvoiceInputFormFragment"
+        tools:context=".view.fragment.InvoiceInputFormFragment"
         android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout

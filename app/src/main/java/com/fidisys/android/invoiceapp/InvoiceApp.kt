@@ -1,11 +1,11 @@
-package com.fidisys.android.booksapp
+package com.fidisys.android.invoiceapp
 
 import android.app.Application
 import android.content.Context
-import com.fidisys.android.booksapp.log.TimberThreadDebugTree
+import com.fidisys.android.invoiceapp.log.TimberThreadDebugTree
 import timber.log.Timber
 
-class BooksApp : Application() {
+class InvoiceApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
