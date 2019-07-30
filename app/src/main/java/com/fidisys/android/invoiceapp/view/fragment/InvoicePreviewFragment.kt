@@ -22,27 +22,10 @@ import java.io.File
  *
  */
 class InvoicePreviewFragment : BaseFragment() {
+    
     override fun setUpView(view: View) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
-
-    private var invoice: Invoice? = null
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setUpViews()
-    }
-
-    private fun setUpViews() {
-        invoice = arguments?.getParcelable("invoice")
-        Timber.d("args invoice %s", invoice)
-    }
-}
-
-/**
- * A simple [Fragment] subclass.
- *
- */
-class InvoicePreviewFragment : Fragment() {
 
     private var invoice: Invoice? = null
     private lateinit var viewGroup: ConstraintLayout
