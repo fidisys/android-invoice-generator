@@ -39,7 +39,7 @@ dependencies {
     implementation networkLibs
     implementation loggingLibs
     implementation imageProcessingLibs
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation legacyLibs
     kapt roomLibsCompiler
     kapt lifecycleLibsCompiler
     kapt glideCompiler

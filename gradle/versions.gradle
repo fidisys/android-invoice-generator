@@ -21,7 +21,8 @@ ext {
             okhttp      : "3.9.0",
             retrofit    : "2.3.0",
             timber      : "4.5.1",
-            ktxCore     : "1.0.0"
+            ktxCore     : "1.0.0",
+            legacy      : "1.0.0"
     ]
 
     kotlinDeps = [
@@ -100,6 +101,10 @@ ext {
             fresco: "com.facebook.fresco:fresco:$versions.fresco"
     ]
 
+    legacyDeps = [
+            legacy: "androidx.legacy:legacy-support-v4:$versions.legacy"
+    ]
+
 
     kotlinLibs = kotlinDeps.values()
     supportLibs = supportDeps.values()
@@ -110,6 +115,7 @@ ext {
     loggingLibs = loggingDeps.values()
     materialCompLibs = materialCompDeps.values()
     imageProcessingLibs = glideDeps.values() + fresocDeps.values()
+    legacyLibs = legacyDeps.values()
 
     roomLibsCompiler = "androidx.room:room-compiler:$versions.room"
     lifecycleLibsCompiler = "androidx.lifecycle:lifecycle-compiler:$versions.lifecycle"
