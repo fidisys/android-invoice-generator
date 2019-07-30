@@ -1,4 +1,4 @@
-package com.fidisys.android.booksapp.pdf
+package com.fidisys.android.invoiceapp.pdf
 
 interface PdfGeneratorCallback {
 

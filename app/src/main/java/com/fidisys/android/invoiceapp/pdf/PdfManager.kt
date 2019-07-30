@@ -1,15 +1,11 @@
-package com.fidisys.android.booksapp.pdf
+package com.fidisys.android.invoiceapp.pdf
 
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.RectF
 import android.graphics.pdf.PdfDocument
-import android.util.DisplayMetrics
-import android.util.Log
-import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.fidisys.android.booksapp.data.Pdf
+import com.fidisys.android.invoiceapp.repository.data.Pdf
 import java.io.File
 import java.io.FileOutputStream
 
