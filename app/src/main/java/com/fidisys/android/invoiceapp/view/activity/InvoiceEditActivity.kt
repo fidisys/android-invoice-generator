@@ -1,10 +1,10 @@
 package com.fidisys.android.invoiceapp.view.activity
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.fidisys.android.invoiceapp.R
+import com.fidisys.android.invoiceapp.base.BaseActivity
 
-class InvoiceEditActivity : AppCompatActivity() {
+class InvoiceEditActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
