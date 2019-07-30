@@ -1,7 +1,6 @@
 package com.fidisys.android.invoiceapp.view.fragment
 
 
-import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
@@ -9,6 +8,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.fidisys.android.invoiceapp.R
+import com.fidisys.android.invoiceapp.base.BaseFragment
 import com.fidisys.android.invoiceapp.repository.data.Invoice
 import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
 
@@ -16,24 +16,11 @@ import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
  * A simple [Fragment] subclass.
  *
  */
-class InvoiceInputFormFragment : Fragment() {
+class InvoiceInputFormFragment : BaseFragment() {
 
     lateinit var invoice: Invoice
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        setUpViews(view)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
-
-    private fun setUpViews(view: View) {
+    override fun setUpView(view: View) {
         invoice_save_button.setOnClickListener { navigateToPreview(view) }
     }
 
