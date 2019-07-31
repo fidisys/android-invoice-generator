@@ -1,12 +1,9 @@
 package com.fidisys.android.invoiceapp.view.fragment
 
 
-import android.os.Bundle
 import android.os.Environment
 import android.util.DisplayMetrics
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import com.fidisys.android.invoiceapp.R
@@ -22,30 +19,16 @@ import java.io.File
  *
  */
 class InvoicePreviewFragment : BaseFragment() {
-    
-    override fun setUpView(view: View) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
     private var invoice: Invoice? = null
     private lateinit var viewGroup: ConstraintLayout
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_invoice_preview, container, false)
+    override fun setUpView(view: View) {
         viewGroup = view.findViewById(R.id.invoice_preview)
-        return view
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun getLayout(): Int {
+        return R.layout.fragment_invoice_preview
     }
 
     private fun generatePdf() {
@@ -112,6 +95,4 @@ class InvoicePreviewFragment : BaseFragment() {
 
         return file
     }
-
-
 }

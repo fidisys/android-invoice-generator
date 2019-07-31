@@ -3,12 +3,12 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/invoiceListsFragment">
+            app:startDestination="@+id/invoiceListsFragment">
 
     <fragment
             android:id="@+id/invoiceListsFragment"
             android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceListFragment"
-            android:label="fragment_invoice_input_form"
+            android:label="invoice_list"
             tools:layout="@layout/fragment_invoice_list">
 
         <action
@@ -21,7 +21,7 @@
     <fragment
             android:id="@+id/invoiceInputFieldsFragment"
             android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceInputFormFragment"
-            android:label="fragment_invoice_input_form"
+            android:label="invoice_input_form"
             tools:layout="@layout/fragment_invoice_input_form">
 
         <action
@@ -34,7 +34,7 @@
     <fragment
             android:id="@+id/invoicePreviewFragment"
             android:name="com.fidisys.android.invoiceapp.view.fragment.InvoicePreviewFragment"
-            android:label="fragment_invoice_preview"
+            android:label="invoice_preview"
             tools:layout="@layout/fragment_invoice_preview">
 
         <argument
