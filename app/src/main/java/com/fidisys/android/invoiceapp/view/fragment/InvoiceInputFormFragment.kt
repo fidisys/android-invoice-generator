@@ -18,6 +18,10 @@ import kotlinx.android.synthetic.main.fragment_invoice_input_form.*
  */
 class InvoiceInputFormFragment : BaseFragment() {
 
+    override fun getLayout(): Int {
+        return R.layout.fragment_invoice_input_form
+    }
+
     lateinit var invoice: Invoice
 
     override fun setUpView(view: View) {

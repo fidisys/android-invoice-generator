@@ -8,7 +8,7 @@
         android:focusable="true"
         android:clickable="true"
         android:focusableInTouchMode="true"
-        tools:context=".view.fragment.InvoiceInputFormFragment"
+        tools:context=".view.fragment.InvoiceListFragment"
         android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -31,6 +31,7 @@
             android:orientation="vertical"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
             android:layout_height="match_parent">
+
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:id="@+id/invoice_recycler"
@@ -45,5 +46,4 @@
             android:layout_margin="@dimen/activity_margin_medium"
             android:layout_gravity="bottom|end"
             android:layout_height="wrap_content"/>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
