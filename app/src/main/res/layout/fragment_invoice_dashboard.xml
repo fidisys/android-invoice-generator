@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".view.fragment.InvoiceDashboardFragment"
+        android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                app:title="@string/invoice_app"
+                app:layout_scrollFlags="scroll"
+                app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                style="@style/Widget.Toolbar"
+                android:layout_height="?attr/actionBarSize"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+        <GridLayout
+                android:id="@+id/grid_layout_dashboard_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:rowCount="3"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:layout_gravity="center_horizontal"
+                android:columnOrderPreserved="false">
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_height="wrap_content"
+                    app:text="Create"
+                    app:image="@drawable/ic_add_circle_outline_black_24dp"/>
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:image="@drawable/ic_file_multiple"
+                    app:text="Invoices"/>
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:image="@drawable/ic_people_outline_black_24dp"
+                    app:text="Clients"/>
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    app:image="@drawable/ic_settings_black_24dp"
+                    app:text="Settings"
+            />
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:image="@drawable/ic_file_pdf_outline"
+                    android:layout_margin="12dp"
+                    app:text="PDFs"
+            />
+
+            <com.fidisys.android.invoiceapp.view.InvoiceDashBoardItemView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:text="Templates"
+                    android:layout_margin="12dp"
+                    app:image="@drawable/ic_settings_black_24dp"
+            />
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,19 +3,37 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@+id/invoiceListsFragment">
+            app:startDestination="@+id/invoiceDashboardFragment">
 
     <fragment
-            android:id="@+id/invoiceListsFragment"
-            android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceListFragment"
+            android:id="@+id/invoiceDashboardFragment"
+            android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceDashboardFragment"
             android:label="invoice_list"
-            tools:layout="@layout/fragment_invoice_list">
+            tools:layout="@layout/fragment_invoice_dashboard">
 
         <action
-                android:id="@+id/action_invoiceListsFragment_to_invoiceInputFieldsFragment"
+                android:id="@+id/action_invoiceDashboardFragment_to_invoiceInputFieldsFragment"
                 app:enterAnim="@anim/fade_out"
                 app:popEnterAnim="@anim/slide_out_right"
                 app:destination="@id/invoiceInputFieldsFragment"/>
+
+        <action
+                android:id="@+id/action_invoiceDashboardFragment_to_invoiceListFragment"
+                app:enterAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_out_right"
+                app:destination="@id/invoiceListFragment"/>
+
+        <action
+                android:id="@+id/action_invoiceDashboardFragment_to_clientListFragment"
+                app:enterAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_out_right"
+                app:destination="@id/clientListFragment"/>
+
+        <action
+                android:id="@+id/action_invoiceDashboardFragment_to_settingsFragment"
+                app:enterAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/slide_out_right"
+                app:destination="@id/settingsFragment"/>
     </fragment>
 
     <fragment
@@ -40,5 +58,24 @@
         <argument
                 android:name="invoice"
                 app:argType="com.fidisys.android.invoiceapp.repository.data.Invoice"/>
+    </fragment>
+
+    <fragment android:id="@+id/invoiceListFragment"
+              android:name="com.fidisys.android.invoiceapp.view.fragment.InvoiceListFragment"
+              android:label="invoice_list"
+              tools:layout="@layout/fragment_invoice_list">
+
+    </fragment>
+
+    <fragment android:id="@+id/clientListFragment"
+              android:name="com.fidisys.android.invoiceapp.view.fragment.ClientListFragment"
+              android:label="client_list"
+              tools:layout="@layout/fragment_client_list">
+    </fragment>
+
+    <fragment android:id="@+id/settingsFragment"
+              android:name="com.fidisys.android.invoiceapp.view.fragment.SettingsFragment"
+              android:label="Settings"
+              tools:layout="@layout/fragment_settings">
     </fragment>
 </navigation>

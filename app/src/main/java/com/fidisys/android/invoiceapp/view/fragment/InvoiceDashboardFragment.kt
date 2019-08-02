@@ -4,12 +4,13 @@ import android.view.View
 import com.fidisys.android.invoiceapp.R
 import com.fidisys.android.invoiceapp.base.BaseFragment
 
-class InvoiceListFragment : BaseFragment() {
-    override fun setUpView(view: View) {
-
-    }
+class InvoiceDashboardFragment : BaseFragment() {
 
     override fun getLayout(): Int {
-        return R.layout.fragment_invoice_list
+        return R.layout.fragment_invoice_dashboard
+    }
+
+    override fun setUpView(view: View) {
+
     }
 }
